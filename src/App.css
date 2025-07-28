@@ -1,0 +1,42 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 260px 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 3fr;
+  grid-template-areas: 
+    "sidebar header header header"
+    "sidebar main main main";
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+/* عرّف كل مكوّن على حسب اسم المنطقة */
+.sidebar {
+  grid-area: sidebar;
+  background-color: #f5f7fa; /* خلفية خفيفة للسايدبار */
+  border-right: 1px solid #ddd;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.header {
+  grid-area: header;
+  padding: 16px 24px;
+  padding-right: 280px; /* لو تبغين تركي مساحة للسايدبار، تأكدي من تعديلها مع التصميم */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  direction: rtl;
+}
+
+.main-content {
+  grid-area: main;
+  padding: 24px;
+  background-color: white;
+  overflow-y: auto; /* تمكين التمرير داخل المحتوى الرئيسي */
+}

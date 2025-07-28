@@ -1,0 +1,66 @@
+.header {
+  width: 100%;
+  padding: 16px 24px;
+  padding-left: 280px; /* هنا نترك مساحة السايدبار على اليسار */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  
+  /* اتجاه الهيدر من اليمين لليسار */
+  direction: rtl;
+}
+
+.header__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0;
+  text-align: right; /* لأن الاتجاه rtl */
+}
+
+.header__search-wrapper {
+  flex: 1;
+  max-width: 400px;
+  padding: 0 16px;
+}
+
+.header__search-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  direction: ltr; /* النص داخل البحث يكتب من اليسار */
+}
+
+.header__search-input:focus {
+  border-color: #3182ce;
+  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.6);
+}
+
+.header__lang-switcher {
+  display: flex;
+  gap: 12px;
+}
+
+.header__lang-button {
+  padding: 6px 14px;
+  font-size: 14px;
+  border: 1px solid #3182ce;
+  background-color: transparent;
+  color: #3182ce;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.header__lang-button:hover {
+  background-color: #3182ce;
+  color: white;
+}
