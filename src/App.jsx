@@ -3,7 +3,7 @@ import './App.css'
 import Header from './components/ui/header.jsx/Header'
 import Sidebar from './components/ui/side.jsx/Sidebar'
 import Footer from './components/ui/footer/Footer'
-import {TableData} from './components/ui/table/TableData.jsx'
+import TableData from './components/ui/table/TableData.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,7 +16,7 @@ function App() {
        <main className="main-content">
         {/* هنا ممكن تضيفي محتوى الصفحة */}
        <p>Welcome to the dashboard main content!</p>
-  <TableData />
+       <TableData />
 
       </main>
       <Footer/>
