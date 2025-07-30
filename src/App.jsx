@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './components/ui/header.jsx/Header'
 import Sidebar from './components/ui/side.jsx/Sidebar'
+import Footer from './components/ui/footer/Footer'
+import {TableData} from './components/ui/table/TableData.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,8 +15,11 @@ function App() {
       <Sidebar/>
        <main className="main-content">
         {/* هنا ممكن تضيفي محتوى الصفحة */}
-        <p>Welcome to the dashboard main content!</p>
+       <p>Welcome to the dashboard main content!</p>
+  <TableData />
+
       </main>
+      <Footer/>
       </div>
   </>
   )

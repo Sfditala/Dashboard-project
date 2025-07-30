@@ -1,0 +1,52 @@
+/* sidebar.css */
+
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background-color: #244479; /* خلفية هادية */
+  border-right: 1px solid #ddd;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* مسافة بين الروابط */
+}
+
+.sidebar nav a {
+  display: flex;
+  align-items: center; /* يحط الأيقونة والنص بنفس الخط */
+  gap: 10px;           /* مسافة معتدلة بين الأيقونة والنص */
+  padding: 10px 14px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: beige;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  box-sizing: border-box;}
+
+.sidebar nav a:hover {
+  background-color: #8ea4b9;
+  color: white;
+}
+
+.sidebar nav a svg {
+  stroke: currentColor; /* لون الأيقونة يتغير مع النص */
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
