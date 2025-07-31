@@ -1,10 +1,11 @@
 .grid-container {
   display: grid;
-  grid-template-columns: 260px 1fr 1fr 1fr;
-  grid-template-rows: 0.2fr 3fr;
+  grid-template-columns: 240px 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 3fr 0.2fr; /* أضفنا صف ثالث للتذييل */
   grid-template-areas: 
     "sidebar header header header"
-    "sidebar main main main";
+    "sidebar main main main"
+    "sidebar footer footer footer"; /* هنا حطينا التذييل تحت */
   height: 100vh;
   width: 100vw;
   box-sizing: border-box;
@@ -13,16 +14,17 @@
 /* عرّف كل مكوّن على حسب اسم المنطقة */
 .sidebar {
   grid-area: sidebar;
-  background-color: #f5f7fa; /* خلفية خفيفة للسايدبار */
+  background-color: #f5f7fa;
   border-right: 1px solid #ddd;
   padding: 20px;
   box-sizing: border-box;
 }
 
+
 .header {
-  grid-area: header;
+   grid-area: header;
   padding: 16px 24px;
-  padding-right: 280px; /* لو تبغين تركي مساحة للسايدبار، تأكدي من تعديلها مع التصميم */
+  padding-right: 280px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -32,11 +34,37 @@
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   direction: rtl;
+
 }
+
 
 .main-content {
   grid-area: main;
   padding: 24px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   overflow-y: auto; /* تمكين التمرير داخل المحتوى الرئيسي */
+  border: 3px rgb(0, 0, 0);
+}
+
+
+
+
+.footer {
+  grid-area: footer;
+  color: #e0e7ff; /* لون الخط الفاتح */
+  padding: 16px 24px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 8px rgba(34, 74, 134, 0.3); /* ظل ناعم من تحت */
+}
+
+p{
+  color:black
+}
+h4 {
+  color: black;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
 }
