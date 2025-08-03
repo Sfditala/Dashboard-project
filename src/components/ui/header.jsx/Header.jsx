@@ -4,10 +4,9 @@ import { Button } from '../button'
 import './Header.css'
 
 
-const Header = () => {
+const Header = ({ toggleSidebar }) => {
   return (
-    <header className="header">
-      {/* Left - Page title or Logo */}
+      <header className='header'>
       <h1 className="header__title">Dashboard</h1>
 
       {/* Center - Search */}

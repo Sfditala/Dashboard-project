@@ -1,9 +1,8 @@
-// components/sidebar.jsx
 import React from 'react'
 import './sidebar.css'; 
 import { Home, Settings, User } from 'lucide-react';
 
-const Sidebar = () => {
+const SidebarComponent = () => {
   return (
     <aside className='sidebar'>
       <h2>Control Panel</h2>
@@ -25,4 +24,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default SidebarComponent;
